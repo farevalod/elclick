@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(params[:user])
 	if @user.save
+		sign_in @user
 		flash[:success] = "Bienvenido a la plataforma ElClick!"
 		redirect_to @user
 	else

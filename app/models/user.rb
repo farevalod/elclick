@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
 	before_save :encrypt_password
 
 	def has_password?(submitted_password)
-		encrypted_password == Password.create(submitted_password)
+		return (Password.new(encrypted_password) == submitted_password)
 		#compare encrypted with submitted
 	end
 
@@ -35,6 +35,12 @@ class User < ActiveRecord::Base
 		return nil if user.nil?
 		return user if user.has_password?(submitted_password)
 	end
+	def self.authenticate_with_pass(id, submitted_password)
+		user = find_by_id(id)
+		return nil if user.nil?
+		return user if(user.encrypted_password == submitted_password)
+	end
+	
 	private
 
 		def encrypt_password
