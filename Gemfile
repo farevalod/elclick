@@ -13,6 +13,7 @@ gem 'bcrypt-ruby'
 
 gem 'gravatar_image_tag'
 gem 'will_paginate', '3.0.pre2'
+gem 'event-calendar', :require => 'event_calendar'
 # Use unicorn as the web server
 # gem 'unicorn'
 
