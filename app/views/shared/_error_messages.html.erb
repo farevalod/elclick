@@ -1,0 +1,12 @@
+<% if @user.errors.any? %>
+  <div class="error">
+    <h2><%= "#{@user.errors.count} error#{(@user.errors.count > 1) ? "es" : ""}" %> 
+        evitaron el registro del usuario: </h2>
+    <p>Hubo problemas con los siguientes campos:</p>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
