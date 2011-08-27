@@ -5,10 +5,17 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-    </td>
+	<% unless @user.posts.empty? %>
+		<table class="posts" summary="User Posts">
+			<%= render @posts %>
+		</table>
+		<%= will_paginate @posts %>
+		<% end %>
+	</td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+	  <strong>Posts</strong> <%= @user.posts.count%>
     </td>
   </tr>
 </table>

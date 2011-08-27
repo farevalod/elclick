@@ -1,0 +1,21 @@
+<tr>
+	<td class="gravatar">
+		<%= link_to gravatar_for(feed_item.user), feed_item.user %>
+	</td>
+	<td class="post">
+		<span class="user">
+			<%link_to feed_item.user.name, feed_item.user %>
+		</span>
+		<span class="content"><%=feed_item.content %></span>
+		<span class="timestamp">
+			Posteado hace <%= time_ago_in_words(feed_item.created_at) %> por <%= link_to feed_item.user.name, feed_item.user %>.
+		</span>
+	</td>
+	<% if current_user?(feed_item.user) %>
+	<td>
+		<%= link_to "borrar", feed_item, :method => :delete,
+										:confirm => "Está seguro?",
+										:title => feed_item.content %>
+	</td>
+	<% end %>
+</tr>

@@ -2,6 +2,7 @@ Railsapp::Application.routes.draw do
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 resources :users
 resources :sessions, :only => [:new, :create, :destroy]
+resources :posts, :only => [:create, :destroy]
 match '/signup',	:to => 'users#new'
 match '/signin',	:to => 'sessions#new'
 match '/signout',	:to => 'sessions#destroy'

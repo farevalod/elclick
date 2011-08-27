@@ -1,9 +1,24 @@
-<h1>Sample App</h1>
 
-<p>
-  Este es el home de la  
-  <a href="http://elclick.cl/">Aplicacion de prueba</a>
-  ,v-testing, 2011/08/18, para ElClick.cl
-</p>
+<% if signed_in? %>
+	<table class="front" summary="Sólo usuarios registrados">
+	<tr>
+		<td class="main">
+			<h1 class="post">Que hay de nuevo:</h1>
+			   <%=render 'shared/post_form' %>
+			   <%= render 'shared/feed' %>
+		</td>
+		<td class="sidebar round">
+			<%= render 'shared/user_info' %>
+		<td>
+	</tr>
+	</table>
+<%else%>
+	<h1>Sample App</h1>
 
-<%= link_to "Registrate!", signup_path, :class => "signup_button round" %>
+	<p>
+	  Este es el home de la  
+	  <a href="http://elclick.cl/">Aplicacion de prueba</a>
+	  ,v-testing, 2011/08/18, para ElClick.cl
+	</p>
+	<%= link_to "Registrate!", signup_path, :class => "signup_button round" %>
+<% end %>

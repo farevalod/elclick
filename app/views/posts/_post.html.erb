@@ -1,0 +1,15 @@
+<tr>
+	<td class="post">
+		<span class ="content"><%= post.content %></span>
+		<span class="timestamp">
+			Posteado hace <%= time_ago_in_words(post.created_at) %>.
+		</span>
+	</td>
+	<% if current_user?(post.user) %>
+	<td>
+		<%= link_to "borrar", post, :method => :delete,
+									:confirm => "Está seguro?",
+									:title => post.content %>
+	</td>
+	<% end %>
+</tr>

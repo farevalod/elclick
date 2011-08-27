@@ -21,9 +21,13 @@ module SessionsHelper
     user == current_user
   end
 
+  def authenticate
+  	deny_access unless signed_in?
+  end
+
   def deny_access
-    redirect_to signin_path, :notice => "Debe identificarse para acceder a esta pagina."
 	store_location
+    redirect_to signin_path, :notice => "Debe identificarse para acceder a esta pagina."
   end
 
   def redirect_back_or(default)

@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 	attr_accessor :password
 	attr_accessible :name, :email, :password, :password_confirmation
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	has_many :posts, :dependent => :destroy
 	validates :name,  	:presence 	=> true
 	validates :email, 	:presence 	=> true,
 						:format 	=> { :with => email_regex },
@@ -40,7 +41,11 @@ class User < ActiveRecord::Base
 		return nil if user.nil?
 		return user if(user.encrypted_password == submitted_password)
 	end
-	
+	def feed
+		# Feed temporal con los posts del usuario
+		Post.where("user_id = ?", id)
+	end
+
 	private
 
 		def encrypt_password
@@ -50,4 +55,4 @@ class User < ActiveRecord::Base
 		def encrypt(string)
 		  string
 		end
-end
+		end

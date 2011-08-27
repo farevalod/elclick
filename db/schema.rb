@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819085922) do
+ActiveRecord::Schema.define(:version => 20110827051107) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(:version => 20110819085922) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "posts", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["created_at"], :name => "index_posts_on_created_at"
+  add_index "posts", ["event_id"], :name => "index_posts_on_event_id"
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
