@@ -1,5 +1,4 @@
 Railsapp::Application.routes.draw do
-  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 resources :users
 resources :sessions, :only => [:new, :create, :destroy]
 resources :posts, :only => [:create, :destroy]
@@ -9,6 +8,7 @@ match '/signout',	:to => 'sessions#destroy'
 match '/contact',	:to => 'pages#contact'
 match '/about',	:to => 'pages#about'
 match '/help',	:to => 'pages#help'
+match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
 root	:to => 'pages#home'
 end

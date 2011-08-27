@@ -1,4 +1,4 @@
-module PostHelper
+module PostsHelper
 
 	def wrap(content)
 		sanitize(raw(content.split.map{ |s| wrap_long_strings(s) }.join(' ')))

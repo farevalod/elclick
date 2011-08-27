@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 		@post = current_user.posts.build(params[:post])
 		if @post.save
 			flash[:success] = "Post creado con éxito!"
-			redirect_to _root_path
+			redirect_to root_path
 		else
 			@feed_items = []
 			render 'pages/home'
