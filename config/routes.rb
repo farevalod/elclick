@@ -8,6 +8,7 @@ match '/signout',	:to => 'sessions#destroy'
 match '/contact',	:to => 'pages#contact'
 match '/about',	:to => 'pages#about'
 match '/help',	:to => 'pages#help'
+match '/videos', :to => 'pages#videos'
 match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
 root	:to => 'pages#home'

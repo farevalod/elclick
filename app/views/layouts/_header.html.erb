@@ -10,6 +10,7 @@
       <% end %>
 		<li><%= link_to "Calendario", calendar_path %></li>
       <li><%= link_to "Ayuda", help_path %></li>
+	  <li><%= link_to "Videos", videos_path %></li>
 	  <% if signed_in? %>
 	  	<li><%= link_to "Salir...", signout_path, :method => :delete %></li>
 	  <% else %>
