@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
 	has_many :relationships, :foreign_key => "follower_id",
 							 :dependent => :destroy
 	has_many :following, :through => :relationships, :source => :followed
+	has_many :reverse_relationships, :foreign_key => "followed_id",
+									 :class_name => "Relationship",
+									 :dependent => :destroy
+	has_many :followers, :through => :reverse_relationships, :source => :follower
 	validates :name,  	:presence 	=> true
 	validates :email, 	:presence 	=> true,
 						:format 	=> { :with => email_regex },
@@ -33,6 +37,18 @@ class User < ActiveRecord::Base
 		return (Password.new(encrypted_password) == submitted_password)
 		#compare encrypted with submitted
 	end
+	
+	def following?(followed)
+		relationships.find_by_followed_id(followed)
+	end
+
+	def follow!(followed)
+		relationships.create!(:followed_id => followed.id)
+	end
+
+	def unfollow(followed)
+		relationships.find_by_followed_id(followed).destroy
+	end
 
 	def self.authenticate(email, submitted_password)
 		user = find_by_email(email)
@@ -45,8 +61,7 @@ class User < ActiveRecord::Base
 		return user if(user.encrypted_password == submitted_password)
 	end
 	def feed
-		# Feed temporal con los posts del usuario
-		Post.where("user_id = ?", id)
+		Post.from_users_followed_by(self)
 	end
 
 	private

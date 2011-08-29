@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
+  before_filter :authenticate, :except => [:show, :new, :create]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
   def new
@@ -43,6 +43,21 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+  def following
+	@title = "Siguiendo"
+	@user = User.find(params[:id])
+	@users = @user.following.paginate(:page => params[:page])
+	render 'show_follow'
+  end
+
+  def followers
+  	@title = "Seguidores"
+	@user = User.find(params[:id])
+	@users = @user.following.paginate(:page => params[:page])
+	render 'show_follow'
+  end
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "Usuario eliminado."
