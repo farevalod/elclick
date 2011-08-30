@@ -170,6 +170,12 @@ div.user_info span.posts{
 	font-size: 80%;
 }
 
+div.calendar{
+	text-align: center;
+	border: 1px dotted #666;
+	padding: 50px;
+}
+
 form.new.post{
 	margin-bottom: 2em;
 }
