@@ -1,4 +1,5 @@
-<% if !(@user.nil?) %>
+<%if !(@user.nil?)%>
+<% if @user.errors.any? %>
   <div class="error">
     <h2><%= "#{@user.errors.count} error#{(@user.errors.count > 1) ? "es" : ""}" %> 
         evitaron el registro del usuario: </h2>
@@ -9,4 +10,5 @@
     <% end %>
     </ul>
   </div>
+<% end %>
 <% end %>
