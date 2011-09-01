@@ -9,8 +9,6 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-		<div class="span16 columns">
 	  <%= render 'layouts/header' %>
       <section class="round">
 	  	<% flash.each do |key, value| %>
@@ -18,10 +16,7 @@
 		<% end %>
         <%= yield %>
       </section>
-	  </div>
-	  </div>
-	  </div>
 	  <%= render 'layouts/footer' %>
-    </div>
+	</div>
   </body>
 </html>
