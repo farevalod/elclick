@@ -1,16 +1,22 @@
 <h1>Usuario registrado</h1>
 
 <%= form_for(:session, :url => sessions_path) do |f| %>
+<div class="clearfix">
   <div class="input">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
+  </div>
+<div class="clearfix">
   <div class="input">
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
+  </div>
+<div class="clearfix">
   <div class="actions">
     <%= f.submit "Ingresar", :class => "btn large primary" %>
+  </div>
   </div>
 <% end %>
 

@@ -25,5 +25,10 @@
 	<div class="span4 columns offset6">
 	<%= link_to "Registrate!", signup_path, :class => "btn large primary" %>
 	</div>
+	<div class="span4 columns">
+	<div class="alert-message block-message warning">
+	<p>Usuario <b>registrado</b>? <%= link_to "Ingresa ahora!", signin_path %></p>
+	</div>
+	</div>
 	</div>
 <% end %>

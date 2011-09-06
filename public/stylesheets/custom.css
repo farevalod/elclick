@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #8F5145;
+  background: #452632;
 }
 
 header {
@@ -19,9 +19,6 @@ div.topbar{
 label{
 	padding-right: 40px;
 }
-div.input{
-	padding-bottom: 10px;
-}
 div.ipost{
 	margin-left: 10px;
 }
@@ -32,7 +29,7 @@ div.actions{
 header img {
 	float: right;
   padding: 1em;
-  background: #a85f51;
+  background: #91204D;
 }
 
 section {
@@ -68,7 +65,7 @@ nav {
 }
 
 nav {
-  background: #a85f51;
+  background: #91204D;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -140,7 +137,7 @@ td.sidebar {
 	  width: 30%;
 	    padding: 1em;
 		  vertical-align: top;
-		    background: #ffc;
+		    background: #E2DDDE;
 }
 
 h1.post {
