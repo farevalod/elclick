@@ -11,9 +11,28 @@ header {
   padding-top: 20px;
 }
 
+div.topbar{
+	float:clear;
+	position: absolute;
+	padding-top: 20px;
+}
+label{
+	padding-right: 40px;
+}
+div.input{
+	padding-bottom: 10px;
+}
+div.ipost{
+	margin-left: 10px;
+}
+	
+div.actions{
+	padding-left: 36%;
+}
 header img {
+	float: right;
   padding: 1em;
-  background: #D9D094;
+  background: #a85f51;
 }
 
 section {
@@ -49,7 +68,7 @@ nav {
 }
 
 nav {
-  background: #D9D094;
+  background: #a85f51;
   padding: 0 0.7em;
   white-space: nowrap;
 }

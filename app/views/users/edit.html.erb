@@ -2,24 +2,24 @@
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-  <div class="field">
+  <div class="input">
     <%= f.label :nombre %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="input">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
+  <div class="input">
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
-  <div class="field">
+  <div class="input">
     <%= f.label :password_confirmation, "Confirmacion" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Actualizar" %>
+    <%= f.submit "Actualizar", :class => "btn large primary" %>
   </div>
 <% end %>
 

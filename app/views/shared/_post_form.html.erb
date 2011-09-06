@@ -1,9 +1,9 @@
 <%= form_for @post do |f| %>
 	<%= render 'shared/error_messages', :object => f.object %>
-	<div class="input">
-		<%= f.text_area :content %>
+	<div class="input ipost">
+		<%= f.text_area :content, :class => "xxlarge" %>
 		</div>
 	<div class="actions">
-		<%= f.submit "Enviar" %>
+		<%= f.submit "Enviar", :class => "btn large primary" %>
 	</div>
 <% end %>

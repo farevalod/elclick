@@ -1,7 +1,13 @@
 <header>
   <%= link_to logo, root_path %>
+  <div class="row">
+  <div class="span8 columns offset4">
+  <div class="topbar-wrapper" style="z-index: 5;">
+  <div class="topbar">
+  <div class="topbar-inner">
+  <div class="container">
+  <ul class=nav">
   <nav class="round">
-    <ul>
       <li><%= link_to "Home", root_path %></li>
 	  <li><%= link_to "Calendario", calendar_path %></li>
 	  <li><%= link_to "Videos", videos_path %></li>
@@ -19,4 +25,10 @@
       <% end %>
     </ul>
   </nav>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  </div>
 </header>
