@@ -4,9 +4,11 @@
       <h1><%= @title %></h1>
 
       <% unless @users.empty? %>
+	  <% @users.each do |user| %>
         <ul class="users">
-          <%= render @users %>
+	  <%= render user %>
         </ul>
+	  <% end %>
         <%= will_paginate @users %>
       <% end %>
     </td>

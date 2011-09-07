@@ -4,21 +4,29 @@
 <%= render 'shared/error_messages' %>
 <fieldset>
 <legend>Nuevo Usuario</legend>
-  <div class="input">
-    <%= f.label :nombre %><br />
+ <div class="clearfix">
+ <div class="input">
+    <%= f.label :nombre %>
     <%= f.text_field :name %>
   </div>
-  <div class="input">
-    <%= f.label :email %><br />
+</div>
+  <div class="clearfix">
+<div class="input">
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
-  <div class="input">
-    <%= f.label "Contraseña" %><br />
+  </div>
+  <div class="clearfix">
+<div class="input">
+    <%= f.label "Contraseña" %>
     <%= f.password_field :password %>
   </div>
-  <div class="input">
-    <%= f.label :password_confirmation, "Confirmar contraseña" %><br />
+  </div>
+  <div class="clearfix">
+<div class="input">
+    <%= f.label :password_confirmation, "Confirmar contraseña" %>
     <%= f.password_field :password_confirmation %>
+  </div>
   </div>
   <div class="actions">
     <%= f.submit "Sign up" , :class => "btn large primary" %>

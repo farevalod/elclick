@@ -14,20 +14,24 @@
 	</tr>
 	</table>
 <%else%>
-	<h1>Sample App</h1>
+	<h1>Elclick.cl</h1>
 
+	<div class="row">
+	<div class="span6 columns">
 	<p>
 	  Este es el home de la  
 	  <a href="http://elclick.cl/">Aplicacion de prueba</a>
 	  ,v-testing, 2011/08/18, para ElClick.cl
 	</p>
+	</div>
+	</div>
 	<div class="row">
-	<div class="span4 columns offset6">
+	<div class="span2 columns offset6">
 	<%= link_to "Registrate!", signup_path, :class => "btn large primary" %>
 	</div>
 	<div class="span4 columns">
-	<div class="alert-message block-message warning">
-	<p>Usuario <b>registrado</b>? <%= link_to "Ingresa ahora!", signin_path %></p>
+	<div class="alert-message block-message success">
+	<p>Usuario <b>registrado</b>?<b> <%= link_to "Ingresa ahora!", signin_path %></b></p>
 	</div>
 	</div>
 	</div>

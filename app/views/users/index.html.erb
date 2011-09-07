@@ -1,9 +1,11 @@
 <h1>Usuarios</h1>
 
 <%= will_paginate %>
-
-<ul class="users">
-   <%= render @users %>
-</ul>
-
-<%= will_paginate %>
+      <% unless @users.empty? %>
+	  <% @users.each do |user| %>
+        <ul class="users">
+	  <%= render user %>
+        </ul>
+	  <% end %>
+        <%= will_paginate @users %>
+      <% end %>

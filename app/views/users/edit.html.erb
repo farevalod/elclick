@@ -4,25 +4,25 @@
   <%= render 'shared/error_messages', :object => f.object %>
 <div class="clearfix">
 <div class="input">
-    <%= f.label :nombre %><br />
+    <%= f.label :nombre %>
     <%= f.text_field :name %>
   </div>
   </div>
 <div class="clearfix">
   <div class="input">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
   </div>
 <div class="clearfix">
   <div class="input">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Contraseña" %>
     <%= f.password_field :password %>
   </div>
   </div>
 <div class="clearfix">
   <div class="input">
-    <%= f.label :password_confirmation, "Confirmacion" %><br />
+    <%= f.label :password_confirmation, "Confirmar contraseña" %>
     <%= f.password_field :password_confirmation %>
   </div>
   </div>

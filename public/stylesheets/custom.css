@@ -27,7 +27,7 @@ div.actions{
 	padding-left: 36%;
 }
 header img {
-	float: right;
+  float: right;
   padding: 1em;
   background: #91204D;
 }
@@ -205,8 +205,16 @@ form.new.post textarea{
 div.field, div.actions {
 	  margin-bottom: 5px;
 }
+div.grav{
+}
+div.usrtxt{
+	float: right;
+	padding-top: 12px;
+}
 ul.users {
+  border: 1px solid #452632;
   margin-top: 1em;
+  padding:10px;
 }
 
 .users li {
