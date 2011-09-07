@@ -1,6 +1,8 @@
 <h1>Usuarios</h1>
 
 <%= will_paginate %>
+<div class="row">
+<div class="span8 columns">
       <% unless @users.empty? %>
 	  <% @users.each do |user| %>
         <ul class="users">
@@ -9,3 +11,5 @@
 	  <% end %>
         <%= will_paginate @users %>
       <% end %>
+	  </div>
+	  </div>
