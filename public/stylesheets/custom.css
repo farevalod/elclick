@@ -1,5 +1,5 @@
 .container {
-  width: 810px;
+  width: 910px;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 
 header {
   font-size: 110%;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 div.topbar{
@@ -24,20 +24,25 @@ div.ipost{
 }
 	
 div.actions{
-	padding-left: 36%;
+  padding-left: 36%;
+  background: #f9d8d8;
 }
 header img {
   float: right;
-  padding: 1em;
   background: #91204D;
+  margin-top: 12px;
+  margin-right: 20px;
 }
 
 section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #fff0f0;
+  background: #f9d8d8;
 }
+pre {
+  background: #f9d8d8;
+  }
 
 section h1 {
   font-size: 200%;
