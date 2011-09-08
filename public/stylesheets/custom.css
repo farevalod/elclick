@@ -51,7 +51,7 @@ section h1 {
 /* Links */
 
 a {
-  color: #23a;
+  color: #88a;
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ a.signup_button {
 footer {
   text-align: center;
   margin-top: 10px;
-height: 300px;
+height: 350px;
 }
 
 footer nav {
@@ -139,10 +139,10 @@ td.main {
 }
 
 td.sidebar {
-	  width: 30%;
-	    padding: 1em;
-		  vertical-align: top;
-		    background: #E2DDDE;
+	width: 30%;
+    padding: 1em;
+	vertical-align: top;
+    background: #E2DDDE;
 }
 
 h1.post {
@@ -227,7 +227,6 @@ ul.users {
 }
 
  div.video{
-	 color: #000000;
 	 float: center;
 	 padding: 10px;
 	 margin: 20px;
