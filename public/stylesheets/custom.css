@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #452632;
+  background: #606F76;
 }
 
 header {
@@ -29,7 +29,7 @@ div.actions{
 }
 header img {
   float: right;
-  background: #91204D;
+  background: #789597;
   margin-top: 12px;
   margin-right: 20px;
 }
@@ -38,7 +38,7 @@ section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #f9d8d8;
+  background: #fcbfb3;
 }
 pre {
   background: #f9d8d8;
@@ -70,7 +70,7 @@ nav {
 }
 
 nav {
-  background: #91204D;
+  background: #789597;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -142,7 +142,7 @@ td.sidebar {
 	width: 30%;
     padding: 1em;
 	vertical-align: top;
-    background: #E2DDDE;
+    background: #bfa79f;
 }
 
 h1.post {
