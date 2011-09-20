@@ -9,7 +9,8 @@
 	<td>
 		<%= link_to "borrar", post, :method => :delete,
 									:confirm => "Está seguro?",
-									:title => post.content %>
+									:title => post.content,
+									:class => "btn danger" %>
 	</td>
 	<% end %>
 </tr>

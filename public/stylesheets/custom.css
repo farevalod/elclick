@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #606F76;
+  background: #096383;
 }
 
 header {
@@ -25,11 +25,11 @@ div.ipost{
 	
 div.actions{
   padding-left: 36%;
-  background: #f9d8d8;
+  background: #f0f0f0;
 }
 header img {
   float: right;
-  background: #789597;
+  background: #62CEF5;
   margin-top: 12px;
   margin-right: 20px;
 }
@@ -38,7 +38,7 @@ section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #fcbfb3;
+  background: #f0f0f0;
 }
 pre {
   background: #f9d8d8;
@@ -51,17 +51,18 @@ section h1 {
 /* Links */
 
 a {
+  font-size: 125%;
   color: #88a;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #ddd;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #aad;
+  color: #FFC31D;
 }
 /* Navigation */
 
@@ -70,7 +71,7 @@ nav {
 }
 
 nav {
-  background: #789597;
+  background: #62CEF5;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -120,7 +121,7 @@ a.signup_button {
 footer {
   text-align: center;
   margin-top: 10px;
-height: 350px;
+  height: 350px;
 }
 
 footer nav {
@@ -142,7 +143,14 @@ td.sidebar {
 	width: 30%;
     padding: 1em;
 	vertical-align: top;
-    background: #bfa79f;
+    background: #FFD86F;
+}
+
+td.sidebar.a {
+	color: #096383;
+}
+td.sidebar.a.visited {
+	color: #096383;
 }
 
 h1.post {
@@ -184,10 +192,13 @@ div.user_info a {
 
 div.user_info span.user_name{
 	position: absolute;
+	font-size: 110%;
+	color: #096383;
 }
 
 div.user_info span.posts{
-	font-size: 80%;
+	font-size: 80%;	
+	color: #096383;
 }
 
 div.calendar{
