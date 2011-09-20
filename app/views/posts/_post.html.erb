@@ -7,7 +7,7 @@
 	</td>
 	<% if current_user?(post.user) %>
 	<td>
-		<%= link_to "borrar", post, :method => :delete,
+		<%= link_to "Borrar", post, :method => :delete,
 									:confirm => "Está seguro?",
 									:title => post.content,
 									:class => "btn danger" %>
