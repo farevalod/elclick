@@ -5,7 +5,8 @@
   <%= link_to user.name, user %>
   <% if current_user.admin? %>
   | <%= link_to "Eliminar", user, :method => :delete, :confirm => "Estas seguro?",
-                                :title => "Delete #{user.name}" %>
+                                :title => "Delete #{user.name}",
+								:class => "btn danger" %>
   <% end %>
 </div>
 

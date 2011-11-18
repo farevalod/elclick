@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #096383;
+  background-image:url('http://elclick.cl:3003/images/logo_pixel.png');
 }
 
 header {
@@ -16,6 +16,10 @@ div.topbar{
 	position: absolute;
 	padding-top: 20px;
 }
+
+div.topbar a:hover {
+	color: #558;
+}
 label{
 	padding-right: 40px;
 }
@@ -25,12 +29,10 @@ div.ipost{
 	
 div.actions{
   padding-left: 36%;
-  background: #f0f0f0;
+  background: #ffffff;
 }
 header img {
   float: right;
-  background: #62CEF5;
-  margin-top: 12px;
   margin-right: 20px;
 }
 
@@ -38,10 +40,10 @@ section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #f0f0f0;
+  background: #ffffff;
 }
 pre {
-  background: #f9d8d8;
+  background: #ffffff;
   }
 
 section h1 {
@@ -51,28 +53,25 @@ section h1 {
 /* Links */
 
 a {
-  font-size: 125%;
-  color: #88a;
+  color: #669;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ddd;
+  color: #99c;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #FFC31D;
+  color: #88a;
 }
 /* Navigation */
 
 nav {
   float: right;
-}
-
-nav {
-  background: #62CEF5;
-  padding: 0 0.7em;
+  height: 40px;
+  background: #ffffff;
+  padding: 0 10px;
   white-space: nowrap;
 }
 
@@ -84,7 +83,7 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0.2em 0;
+  padding: 5px 0;
 }
 
 nav ul li a {
@@ -93,11 +92,12 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #99f;
+  color: #88a;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #99a;
 }
 /* Sign up button */
 
@@ -121,7 +121,7 @@ a.signup_button {
 footer {
   text-align: center;
   margin-top: 10px;
-  height: 350px;
+height: 350px;
 }
 
 footer nav {
@@ -143,14 +143,7 @@ td.sidebar {
 	width: 30%;
     padding: 1em;
 	vertical-align: top;
-    background: #FFD86F;
-}
-
-td.sidebar.a {
-	color: #096383;
-}
-td.sidebar.a.visited {
-	color: #096383;
+    background: #E2DDDE;
 }
 
 h1.post {
@@ -192,13 +185,10 @@ div.user_info a {
 
 div.user_info span.user_name{
 	position: absolute;
-	font-size: 110%;
-	color: #096383;
 }
 
 div.user_info span.posts{
-	font-size: 80%;	
-	color: #096383;
+	font-size: 80%;
 }
 
 div.calendar{
@@ -228,7 +218,7 @@ div.usrtxt{
 	padding-top: 12px;
 }
 ul.users {
-  border: 1px solid #452632;
+  border: 1px solid #339999;
   margin-top: 1em;
   padding:10px;
 }
