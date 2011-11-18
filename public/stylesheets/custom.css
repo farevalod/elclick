@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #452632;
+  background-image:url('http://elclick.cl:3003/images/logo_pixel.png');
 }
 
 header {
@@ -16,6 +16,10 @@ div.topbar{
 	position: absolute;
 	padding-top: 20px;
 }
+
+div.topbar a:hover {
+	color: #558;
+}
 label{
 	padding-right: 40px;
 }
@@ -25,12 +29,10 @@ div.ipost{
 	
 div.actions{
   padding-left: 36%;
-  background: #f9d8d8;
+  background: #ffffff;
 }
 header img {
   float: right;
-  background: #91204D;
-  margin-top: 12px;
   margin-right: 20px;
 }
 
@@ -38,10 +40,10 @@ section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #f9d8d8;
+  background: #ffffff;
 }
 pre {
-  background: #f9d8d8;
+  background: #ffffff;
   }
 
 section h1 {
@@ -51,27 +53,25 @@ section h1 {
 /* Links */
 
 a {
-  color: #88a;
+  color: #669;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #99c;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #aad;
+  color: #88a;
 }
 /* Navigation */
 
 nav {
   float: right;
-}
-
-nav {
-  background: #91204D;
-  padding: 0 0.7em;
+  height: 40px;
+  background: #ffffff;
+  padding: 0 10px;
   white-space: nowrap;
 }
 
@@ -83,7 +83,7 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0.2em 0;
+  padding: 5px 0;
 }
 
 nav ul li a {
@@ -92,11 +92,12 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #99f;
+  color: #88a;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #99a;
 }
 /* Sign up button */
 
@@ -217,7 +218,7 @@ div.usrtxt{
 	padding-top: 12px;
 }
 ul.users {
-  border: 1px solid #452632;
+  border: 1px solid #339999;
   margin-top: 1em;
   padding:10px;
 }

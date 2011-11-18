@@ -1,7 +1,7 @@
 <header>
   <div class="row">
   <div class="span8 columns offset4">
-  <div class="topbar-wrapper" style="z-index: 5;">
+  <div class="topbar-wrapper" style="z-index: 10000;">
   <div class="topbar">
   <div class="topbar-inner">
   <div class="container">
@@ -20,7 +20,7 @@
 	  <% if signed_in? %>
 	  	<li><%= link_to "Salir...", signout_path, :method => :delete %></li>
 	  <% else %>
-	  	<li><%= link_to "Login...", signin_path %></li>
+	  	<li><%= link_to "Ingresa!", signin_path %></li>
       <% end %>
     </ul>
   </nav>
